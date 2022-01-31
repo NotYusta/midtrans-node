@@ -23,7 +23,7 @@ export class MidtransUtility {
 		return crypto
 			.createHash('sha512')
 			.update(
-				`${orderId}${statusCode.toString()}${grossAmount.toString()}${authKey}`,
+				`${orderId}${statusCode}${grossAmount}${authKey}`,
 				'utf8'
 			)
 			.digest('hex');
